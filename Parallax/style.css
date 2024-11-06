@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(4, 4, 4);
+}
+
+.container {
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top_div {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    background-image: url('img/background.png');
+    background-size: cover;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+nav {
+    width: 25%;
+    height: 100%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+img {
+    position: absolute;
+}
+
+h1 {
+    color: rgb(21, 12, 58);
+    z-index: 1;
+    font-size: calc(5vw + 7vh); /* динамический размер */
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+
+button {
+    width: 28%;
+    height: 45%;
+    border: none;
+    font-size: 14px;
+    background-color: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+}
+
+.button_text {
+    position: absolute;
+    top: 25%;
+    left: 18%;
+    color: white;
+    transition: 1s;
+    font-weight: 600;
+    font-size: calc(0.5vw + 0.7vh);
+}
+
+.buttonDiv {
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+button:hover .button_text {
+    color: black;
+}
+
+button:hover > .buttonDiv {
+    width: 100%;
+    height: 100%;
+    animation: buttonAnim 0.65s forwards;
+}
+
+button:not(:hover) > .buttonDiv {
+    background-color: transparent;
+    animation: buttonAnim2 0.75s forwards;
+}
+
+@keyframes buttonAnim {
+    from {
+        width: 0;
+        height: 0;
+        transform: scale(0);
+    }
+
+    to {
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        background-color: white;
+    }
+}
+
+@keyframes buttonAnim2 {
+    from {
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        background-color: white;
+    }
+
+    to {
+        width: 0;
+        height: 0;
+        transform: scale(0);
+    }
+}
+
+.gate_left {
+    bottom: 0;
+    right: 30%;
+    z-index: 2;
+}
+
+.gate_right {
+    left: 30%;
+    bottom: 0;
+    z-index: 2;
+}
+
+.grass {
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+}
+
+.tree_left {
+    left: 0;
+    top: 0;
+}
+
+.tree_right {
+    right: 0;
+    z-index: 1;
+    top: 0;
+}
+
+.bottom_div {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(4, 4, 4);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+}
+
+h2 {
+    color: white;
+    font-size: calc(2vw + 2vh); /* динамический размер */
+    margin-left: 5%;
+}
+
+.text_div {
+
+    width: 90%;
+    height: 18%;
+    margin-left: 5%;
+    font-size: calc(1vw + 1vh); 
+    color: white;
+}
+
+
+@media(max-width : 1030px) {
+
+    h1 {
+        left: 31%;
+    }
+
+    .gate_right {
+
+        width: 90%;
+        height: 80%;
+    }
+
+    .gate_left {
+
+        width: 90%;
+        height: 80%;
+
+    }
+}
+
+@media(max-width : 770px) {
+
+    h1 {
+        left: 28%;
+    }
+
+    .gate_right {
+
+        width: 90%;
+        height: 60%;
+    }
+
+    .gate_left {
+
+        width: 90%;
+        height: 60%;
+
+    }
+
+
+    .tree_left {
+
+        top: 10%;
+    }
+}
+
+@media(max-width : 430px) {
+
+    h1 {
+        left: 20%;
+    }
+
+    .gate_right {
+
+        width: 100%;
+        height: 50%;
+    }
+
+    .gate_left {
+
+        width: 100%;
+        height: 50%;
+
+    }
+
+
+    .tree_left {
+
+        display: none;
+    }
+}
+
+
+
+@media(max-width : 380px) {
+
+    h1 {
+        left: 10%;
+    }
+
+    .gate_right {
+
+        width: 100%;
+        height: 60%;
+    }
+
+    .gate_left {
+
+        width: 100%;
+        height: 60%;
+
+    }
+
+
+    .tree_left {
+
+        display: none;
+    }
+}
+
+
+@media(max-width : 1030px) {
+
+    
+    header {
+
+        width: 100%;
+        height: 6%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    
+    nav {
+        width: 35%;
+        height: 100%;
+        padding-right: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    
+    .button_text {
+
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        color: white;
+        transition: 1s;
+        font-weight: 600;
+        font-size: calc(0.5vw + 0.7vh);
+    }
+    
+    .buttonDiv {
+
+        width: 100%;
+        height: 100%;
+        transition: 0.4s;
+        border-radius: 25px;
+		background-color: transparent;
+    }
+}
+
+@media(max-width : 770px) {
+
+    
+    header {
+
+        width: 100%;
+        height: 6%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    
+    nav {
+        width: 45%;
+        height: 100%;
+        padding-right: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    
+    .button_text {
+
+        position: absolute;
+        top: 35%;
+        left: 20%;
+        color: white;
+        transition: 1s;
+        font-weight: 600;
+        font-size: calc(0.5vw + 0.7vh);
+    }
+    
+    .buttonDiv {
+
+        width: 100%;
+        height: 100%;
+        transition: 0.4s;
+        border-radius: 25px;
+		background-color: transparent;
+    }
+}
+
+
+@media(max-width : 430px) {
+
+    
+    header {
+
+        width: 100%;
+        height: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    
+    nav {
+        width: 45%;
+        height: 100%;
+        padding-right: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    
+    .button_text {
+
+        position: absolute;
+        top: 40%;
+        left: 0%;
+        color: white;
+        transition: 1s;
+        font-weight: 600;
+        font-size: calc(0.5vw + 0.7vh);
+    }
+    
+    .buttonDiv {
+
+        width: 100%;
+        height: 100%;
+        transition: 0.4s;
+        border-radius: 25px;
+		background-color: transparent;
+    }
+}
+
+
+.active {
+
+    background-color: rgba(0, 0, 0, 0.545);
+   
+}
+
+
