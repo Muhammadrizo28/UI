@@ -13,7 +13,7 @@
 .head {
 
     width: 100%;
-    height: 10%;
+    height: 9%;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -23,7 +23,7 @@
 
 nav {
 
-    width: 30%;
+    width: 23%;
     height: 50%;
     padding-right: 5%;
     display: flex;
@@ -35,8 +35,7 @@ nav {
 
 
 button {
-
-    width: 28%;
+    width: 35%;
     height: 45%;
     border: none;
     font-size: 14px;
@@ -49,60 +48,81 @@ button {
     justify-content: center;
     position: relative;
     z-index: 3;
-    
 }
 
 .button_text {
-
-    position: absolute;
-    top: 25%;
-    left: 17%;
+  
     color: white;
-    transition: 1s;
     font-weight: 600;
+    font-size: calc(0.5vw + 0.7vh);
+    opacity: 0;
 }
 
 .buttonDiv {
-
     width: 100%;
     height: 100%;
-
     transition: 0.4s;
     border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-
-button:hover .button_text{
-
+button:hover .button_text {
     color: black;
+    display: none;
+}
 
+button:not(:hover) .button_text {
+
+    animation: btn_textAnim 3s forwards;
 }
 
 button:hover > .buttonDiv {
-
     width: 100%;
     height: 100%;
     animation: buttonAnim 0.65s forwards;
 }
 
-button:not(:hover) > .buttonDiv {
+button:not(:hover)  .inner_text{
+    display: none;
+}
 
+button:not(:hover) > .buttonDiv {
     background-color: transparent;
     animation: buttonAnim2 0.75s forwards;
 }
 
-@keyframes buttonAnim {
+
+@keyframes btn_textAnim {
 
     from {
+        display: none;
+        opacity: 0;
+        
+    }
 
+    10% {
+
+        display: block;
+
+    }
+
+    to {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes buttonAnim {
+    from {
         width: 0;
         height: 0;
         transform: scale(0);
     }
 
     to {
-
         width: 100%;
         height: 100%;
         transform: scale(1);
@@ -110,9 +130,7 @@ button:not(:hover) > .buttonDiv {
     }
 }
 
-
 @keyframes buttonAnim2 {
-
     from {
         width: 100%;
         height: 100%;
@@ -121,10 +139,8 @@ button:not(:hover) > .buttonDiv {
     }
 
     to {
-
         width: 0;
         height: 0;
-
         transform: scale(0);
     }
 }
@@ -247,14 +263,14 @@ body {
     .head {
 
         width: 100%;
-        height: 3%;
+        height: 5%;
         display: flex;
         align-items: center;
         justify-content: end;
     }
     
     nav {
-        width: 35%;
+        width: 27%;
         height: 100%;
         padding-right: 5%;
         display: flex;
@@ -263,16 +279,7 @@ body {
     }
 
     
-    .button_text {
 
-        position: absolute;
-        top: 40%;
-        left: 15%;
-        color: white;
-        transition: 1s;
-        font-weight: 600;
-        font-size: calc(0.5vw + 0.7vh);
-    }
     
     .buttonDiv {
 
@@ -290,14 +297,13 @@ body {
     .head {
 
         width: 100%;
-        height: 3%;
         display: flex;
         align-items: center;
         justify-content: end;
     }
     
     nav {
-        width: 45%;
+        width: 32%;
         height: 100%;
         padding-right: 5%;
         display: flex;
@@ -306,16 +312,7 @@ body {
     }
 
     
-    .button_text {
 
-        position: absolute;
-        top: 40%;
-        left: 20%;
-        color: white;
-        transition: 1s;
-        font-weight: 600;
-        font-size: calc(0.5vw + 0.7vh);
-    }
     
     .buttonDiv {
 
@@ -334,15 +331,15 @@ body {
     .head {
 
         width: 100%;
-        height: 5%;
+        height: 6%;
         display: flex;
         align-items: center;
         justify-content: end;
     }
     
     nav {
-        width: 45%;
         height: 100%;
+        width: 45%;
         padding-right: 5%;
         display: flex;
         align-items: center;
@@ -350,16 +347,7 @@ body {
     }
 
     
-    .button_text {
 
-        position: absolute;
-        top: 40%;
-        left: 0%;
-        color: white;
-        transition: 1s;
-        font-weight: 600;
-        font-size: calc(0.5vw + 0.7vh);
-    }
     
     .buttonDiv {
 

@@ -26,12 +26,12 @@ const button3 = document.getElementById('button3')
 
 button.onclick = () => {
 
-    window.location.href = '/index.html'
+    window.location.href = '/Parallax'
 }
 
 button2.onclick = () => {
 
-    window.location.href = '/forest-html/index.html'
+    window.location.href = './forest-html/index.html'
 }
 
 
