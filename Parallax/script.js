@@ -26,7 +26,7 @@ const button3 = document.getElementById('button3')
 
 button.onclick = () => {
 
-    window.location.href = '/Parallax'
+    window.location.href = '/'
 }
 
 button2.onclick = () => {
